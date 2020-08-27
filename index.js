@@ -43,7 +43,7 @@ burger.discount = function(str) {
   }
 }
 
-console.log(burger.discount("public"));
+// console.log(burger.discount("public"));
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -59,6 +59,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+  console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
