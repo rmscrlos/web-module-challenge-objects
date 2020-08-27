@@ -13,7 +13,11 @@ function createMenuItem(name, cost, category){
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+const alfredo = new createMenuItem("Alfredo", 15, "Dinner");
+const chickenSandwich = new createMenuItem("Chicken Sandwich", 12, "Lunch");
+const pizza = new createMenuItem("Pizza", 14, "Dinner");
 
+console.log(alfredo, chickenSandwich, pizza);
 
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
