@@ -17,8 +17,8 @@ const alfredo = new createMenuItem("Alfredo", 15, "Dinner");
 const chickenSandwich = new createMenuItem("Chicken Sandwich", 12, "Lunch");
 const pizza = new createMenuItem("Pizza", 14, "Dinner");
 
-console.log(alfredo, chickenSandwich, pizza);
 
+// console.log(alfredo, chickenSandwich, pizza);
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
@@ -31,6 +31,19 @@ and should return a number.
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
 
+burger.discount = function(str) {
+  if (str === "teacher") {
+    disc = burger.price * .25;
+    return burger.price - disc;
+  } else if (str === "public") {
+    disc = burger.price * .10;
+    return burger.price - disc;
+  } else {
+    alert("Enter 'tearcher' or 'public' to add discount");
+  }
+}
+
+console.log(burger.discount("public"));
 
 ///////////////Reviews (MVP)///////////////////
 
