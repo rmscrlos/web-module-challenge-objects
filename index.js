@@ -65,9 +65,13 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
   reviews.push({name: "Carlos", rating: 4.5, feedback: "Awesome food. The alfread is to die for!!"});
 
-  console.log(reviews);
+  // console.log(reviews);
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
+  reviews[7].feedback = "This place is chill with really cool people, great for getting work done on weekdays";
+  
+  // console.log(reviews[7]);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
