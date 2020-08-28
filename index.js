@@ -64,7 +64,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
-  reviews.push({name: "Carlos", rating: 4.5, feedback: "Awesome food. The alfredo is to die for!!"});
+  reviews.push({name: "Carlos", rating: 4.8, feedback: "Awesome food. The alfredo is to die for!!"});
 
   // console.log(reviews);
 
@@ -124,10 +124,18 @@ function getLastReview(reviews) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(reviews, rateNum) {
+    for(let i = 0; i < reviews.length; i++){
+      if(reviews[i].rating === rateNum) {
+        let a =reviews.splice(i, 1);
+        reviews.unshift(a[0]);
+        return reviews;
+      }
+    }
   }
 
+
+console.log(getReviewByRating(reviews, 4.5));
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
