@@ -57,13 +57,14 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
     {name:"Reyna", rating: 3.5, feedback: ""},
 ]
 
+
 /* Task 3: Console.log just Julius' feedback */
 
   // console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
-  reviews.push({name: "Carlos", rating: 4.5, feedback: "Awesome food. The alfread is to die for!!"});
+  reviews.push({name: "Carlos", rating: 4.5, feedback: "Awesome food. The alfredo is to die for!!"});
 
   // console.log(reviews);
 
@@ -85,10 +86,11 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
-function getReviewByIndex(reviews, index) {
-    /* code here */
-  }
+  function getReviewByIndex(reviews, index) {
+    return `${reviews[index].name} gave the restaurant a ${reviews[index].rating}, and their feedback was: ${reviews[index].feedback}`; 
+    }
   
+  // console.log(getReviewByIndex(reviews, 2));
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
@@ -99,9 +101,13 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
+function getLastReview(reviews) {
+      let last = reviews.length - 1;
+      return `${reviews[last].name} gave the restaurant a ${reviews[last].rating}, and their feedback was: ${reviews[last].feedback}`;
   } 
+
+  console.log(getLastReview(reviews));
+
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
